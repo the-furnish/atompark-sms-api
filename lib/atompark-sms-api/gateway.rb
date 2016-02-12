@@ -7,9 +7,6 @@ class AtomparkSmsApi::Gateway
     @method = method
     @params = params.merge(action: method, key: AtomparkSmsApi.config.pubkey, version: '3.0')
     @conn = Faraday.new(url: AtomparkSmsApi.config.base_url)
-#    do |faraday|
-#      faraday.response(:logger)
- #   end
   end
 
   def perform
