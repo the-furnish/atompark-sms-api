@@ -1,0 +1,5 @@
+require 'atompark-sms-api/version'
+require 'atompark-sms-api/configuration'
+require 'atompark-sms-api/gateway'
+require 'atompark-sms-api/response'
+require 'atompark-sms-api/send'
