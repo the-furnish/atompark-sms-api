@@ -8,12 +8,13 @@ module AtomparkSmsApi
   end
 
   class Configuration
-    attr_accessor :pubkey, :pvtkey, :base_url, :sender
+    attr_accessor :pubkey, :pvtkey, :base_url, :sender, :test
 
     def initialize
       @pubkey = ''
       @pvtkey = ''
       @sender = ''
+      @test = false
       @base_url = 'http://api.atompark.com/sms/3.0/'
     end
   end

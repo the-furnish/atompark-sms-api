@@ -6,6 +6,8 @@ class AtomparkSmsApi::Gateway
   def initialize(method, params)
     @method = method
     @params = params.merge(action: method, key: AtomparkSmsApi.config.pubkey, version: '3.0')
+    @params.merge!(test: true) if AtomparkSmsApi.config.test
+
     @conn = Faraday.new(url: AtomparkSmsApi.config.base_url)
   end
 
