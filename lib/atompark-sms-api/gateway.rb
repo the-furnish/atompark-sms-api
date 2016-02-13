@@ -1,3 +1,5 @@
+require 'faraday'
+
 class AtomparkSmsApi::Gateway
   def self.perform(*args)
     fail "Don't call me that way"
